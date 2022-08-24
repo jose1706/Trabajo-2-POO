@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Ejer19 {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		double lado;
+		System.out.println("ingrese el lado del triangulo equilatero: ");
+		lado = entrada.nextDouble();
+		entrada.close();
+		double perimetro, altura, area, A;
+		perimetro = 3*lado;
+		altura = (Math.sqrt(3)*lado)/2;
+		area = (Math.sqrt(3)*(lado*lado))/4;
+		A = (lado * altura)/2;
+		System.out.println("el perimetro es: "+perimetro);
+		System.out.println("la altura es: "+altura);
+		System.out.println("el area es: "+area);
+	}
+
+}
