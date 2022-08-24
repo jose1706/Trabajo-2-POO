@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		String codem, nombre;
+		float hotra, valor, porcentaje;
+		System.out.println("ingrese codigo del empleado: ");
+		codem = entrada.nextLine();
+		System.out.println("ingrese nombre del empleado: ");
+		nombre = entrada.nextLine();
+		System.out.println("ingrese numero de horas trabajadas al mes: ");
+		hotra = entrada.nextFloat();
+		System.out.println("ingrese valor hora trabajada: ");
+		valor = entrada.nextFloat();
+		System.out.println("ingrese porcentaje de retencion en la fuente: ");
+		porcentaje = entrada.nextFloat();
+		System.out.println(codem+", "+nombre+", "+"el salario bruto es: "+(valor*hotra)+" y "+"el salario neto es:  "+(-(valor*hotra)*(porcentaje/100)+(valor*hotra)));
+		
+	}
+
+}
