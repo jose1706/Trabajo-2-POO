@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ejer7cap4 {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		float A, B;
+		System.out.print("ingrese A: ");
+		A = entrada.nextFloat();
+		System.out.print("ingrese B: ");
+		B = entrada.nextFloat();
+		entrada.close();
+		if (A > B) {
+			System.out.print("A es mayor que B ");
+			
+		}
+		else if (A < B) {
+			System.out.print("A es menor que B ");
+		}
+		else {
+			System.out.print("A es igual que B ");
+		}
+	}
+
+}
