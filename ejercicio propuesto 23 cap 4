@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class ejercicio_23{
+    public static void main(String[] args) {
+        double a, b, c, x1, x2, determinante;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("ingrese el valor de A: ");
+        a = entrada.nextDouble();
+        System.out.println("ingrese el valor de B: ");
+        b = entrada.nextDouble();
+        System.out.println("ingrese el valor de C: ");
+        c = entrada.nextDouble();
+        determinante = (Math.pow(b,2)-4*a*c);
+        if (a==0 && b==0 && c==0){
+            System.out.println("X puede tomar cualquier valor");
+        }
+        else if (a==0 && b==0 & c!=0){
+            System.out.println("no hay solucion posible");
+        }
+        else if (a==0 && b!=0){
+            x1=x2= -c/b;
+            System.out.println("Las soluciones son x1: " + x1 + " y x2: " + x2);
+        }
+        else if (determinante>0){
+            x1=(-b+Math.sqrt(determinante))/(2*a);
+            x2=(-b-Math.sqrt(determinante))/(2*a);
+            System.out.println("Las soluciones son x1: " + x1 + " y x2: " + x2);
+        }
+        else if (determinante==0){
+            x1=x2= -b/(2*a);
+            System.out.println("Las soluciones son x1: " + x1 + " y x2: " + x2);
+        }
+        else {
+            determinante=Math.abs(determinante);
+            x1=(-b+Math.sqrt(determinante))/(2*a);
+            x2=(-b-Math.sqrt(determinante))/(2*a);
+            System.out.println("Las soluciones son x1: " + x1 + " y x2: " + x2);
+        }
+    }
+}
