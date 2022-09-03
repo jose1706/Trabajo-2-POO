@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class ejercicio_24{
+    public static void main(String[] args) {
+        double a, b, c;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese el peso de la esfera A: ");
+        a=entrada.nextDouble();
+        System.out.println("Ingrese el peso de la esfera B: ");
+        b=entrada.nextDouble();
+        System.out.println("Ingrese el peso de la esfera C: ");
+        c=entrada.nextDouble();
+        if (a>b && a>c){
+            if (b>c){
+                System.out.println("La esfera de mayor peso es la A seguida por la B y por ultimo la C");
+            }
+            else {
+                System.out.println("La esfera de mayor peso es la A seguida por la C y por ultimo la B");
+            }
+        }
+        else if (b>a && b>c){
+            if (a>c){
+                System.out.println("La esfera de mayor peso es la B seguida por la A y por ultimo la C");
+            }
+            else {
+                System.out.println("La esfera de mayor peso es la B seguida por la C y por ultimo la A");
+            }
+        }
+        else if (b>a){
+            System.out.println("La esfera de mayor peso es la C seguida por la B y por ultimo la A");
+        }
+        else {
+            System.out.println("La esfera de mayor peso es la C seguida por la A y por ultimo la B");
+        }
+    }
+}
