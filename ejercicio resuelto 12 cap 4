@@ -1,0 +1,27 @@
+class dinero_trabajador{
+    public static void main(String[] args){
+        String nom;
+        double nht, vhn, het, hee8, salario;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("ingrese el nombre del trabajador:");
+        nom = entrada.next();
+        System.out.println("Ingrese el numero de horas trabajadas:");
+        nht = entrada.nextInt();
+        System.out.println("Ingrese el valor de la hora trabajada:");
+        vhn = entrada.nextInt();
+        if (nht > 40){
+            het = nht - 40;
+            if (het > 8){
+                hee8 = het - 8;
+                salario = 40 * vhn + 16 * vhn +hee8 * 3 * vhn;
+            }
+            else{
+                salario = 40 * vhn + het * 2 * vhn;
+            }
+        }
+        else{
+            salario = nht * vhn;
+        }
+    System.out.println("El trabajador " + nom + " devengo: $" + salario);
+    }
+}
