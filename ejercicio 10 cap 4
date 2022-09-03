@@ -1,0 +1,21 @@
+class pagomatricula{
+    public static void main(String[] args){
+        int ni, pat, es;
+        double pagmat;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese el numero de inscripcion:");
+        ni = entrada.nextInt();
+        System.out.println("Ingrese el nombre:");
+        String nom = entrada.next();
+        System.out.println("Ingrese el patrimonio:");
+        pat = entrada.nextInt();
+        System.out.println("ingrese el estrato social:");
+        es = entrada.nextInt();
+        pagmat = 50000;
+        if ((pat>2000000)&&(es>3)){
+            pagmat = pagmat + 0.03*pat;
+        }
+        System.out.println(("El estudiante con numero de inscripcion " + ni + " y nombre " +
+                nom + " debe pagar: $" + pagmat));
+    }
+}
