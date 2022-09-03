@@ -1,0 +1,28 @@
+class  valcomp{
+    public static void main(String[] args) {
+        double valcomp, valpag, pdes;
+        String color;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese el valor de la compra:");
+        valcomp = entrada.nextInt();
+        System.out.println("Ingrese el color:");
+        color = entrada.next();
+        if (Objects.equals(color, "blanco")) {
+            pdes = 0;
+        }
+        else if (Objects.equals(color, "verde")) {
+            pdes = 10;
+        }
+        else if (Objects.equals(color, "amarillo")) {
+            pdes = 25;
+        }
+        else if (Objects.equals(color, "azul")) {
+            pdes = 50;
+        }
+        else{
+            pdes = 100;
+        }
+        valpag = valcomp - ((pdes*valcomp)/100);
+        System.out.println("El cliente debe pagar: $" + valpag);
+        }
+}
